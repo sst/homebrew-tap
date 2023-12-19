@@ -5,22 +5,22 @@
 class Sst < Formula
   desc ""
   homepage ""
-  version "0.0.43"
+  version "0.0.44"
 
   depends_on "pulumi/tap/pulumi"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sst/ion/releases/download/v0.0.43/sst-mac-arm64.tar.gz"
-      sha256 "0aced1b5529ac1dca36ce2bf5e9a10f33693f1a908959fd0e79c1ed9e8bb1a19"
+    if Hardware::CPU.intel?
+      url "https://github.com/sst/ion/releases/download/v0.0.44/sst-mac-x86_64.tar.gz"
+      sha256 "041138717391a2fafb7e2ad5f2ab3c5312e58ad22911e55c372b789c1d085df9"
 
       def install
         bin.install "sst"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sst/ion/releases/download/v0.0.43/sst-mac-x86_64.tar.gz"
-      sha256 "20f52ddc142cb2b1bede8a74f68d0c661d034c5e8502195402ab36f648667cc9"
+    if Hardware::CPU.arm?
+      url "https://github.com/sst/ion/releases/download/v0.0.44/sst-mac-arm64.tar.gz"
+      sha256 "59494d0ea28d11939741f95b3d058ba01cdfc31a6a94540d1f3a0b26db10ebfe"
 
       def install
         bin.install "sst"
@@ -29,17 +29,17 @@ class Sst < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/ion/releases/download/v0.0.43/sst-linux-arm64.tar.gz"
-      sha256 "96e5e50781362fc583ded6ee23a003d10d5168ee5ed7bd6504074cca2c839172"
+    if Hardware::CPU.intel?
+      url "https://github.com/sst/ion/releases/download/v0.0.44/sst-linux-x86_64.tar.gz"
+      sha256 "d9e7a46f6aa8417bb0ac3fdc3841ba9c850cd9e03130e6a31b2c0a4a9a74963b"
 
       def install
         bin.install "sst"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sst/ion/releases/download/v0.0.43/sst-linux-x86_64.tar.gz"
-      sha256 "06b7b4c8746c22819eb22dafebe935889d06872c2d33b0fb9bcc85f0ce1b15f4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sst/ion/releases/download/v0.0.44/sst-linux-arm64.tar.gz"
+      sha256 "2e09fc132bbaee5fba50ae1adcc7f842063293ecf5fb36d4b5196a44b8c1cefc"
 
       def install
         bin.install "sst"

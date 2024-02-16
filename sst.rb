@@ -5,20 +5,20 @@
 class Sst < Formula
   desc ""
   homepage ""
-  version "0.0.95"
+  version "0.0.96"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sst/ion/releases/download/v0.0.95/sst-mac-x86_64.tar.gz"
-      sha256 "9f2630d34d73f92745a3c079422c81045ad9070db24d0c8daf847e1aaa0780fb"
+    if Hardware::CPU.arm?
+      url "https://github.com/sst/ion/releases/download/v0.0.96/sst-mac-arm64.tar.gz"
+      sha256 "baa99a72bd439278f734c0891d279898ed7b4a22e3e1f94e8b5e1143f5fd092f"
 
       def install
         bin.install "sst"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/sst/ion/releases/download/v0.0.95/sst-mac-arm64.tar.gz"
-      sha256 "f7bc1f52bb9e96722f5eb4adfb63d35c9832a751426dc28dd5bd93c00a67f7a4"
+    if Hardware::CPU.intel?
+      url "https://github.com/sst/ion/releases/download/v0.0.96/sst-mac-x86_64.tar.gz"
+      sha256 "2fb2a65a5d82e84d573cdfb7fbe9d5fd6a0f43324295d7f2026a97dff3fbfec0"
 
       def install
         bin.install "sst"
@@ -27,17 +27,17 @@ class Sst < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/ion/releases/download/v0.0.95/sst-linux-arm64.tar.gz"
-      sha256 "98c57176c574b512e008c3b852a16958cb5de3e588acbfea93b08ea47d09e88a"
+    if Hardware::CPU.intel?
+      url "https://github.com/sst/ion/releases/download/v0.0.96/sst-linux-x86_64.tar.gz"
+      sha256 "98bc13caae17444ba698c0a444c4a34fae49fa6f178c74c7e23846cc851f9b52"
 
       def install
         bin.install "sst"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sst/ion/releases/download/v0.0.95/sst-linux-x86_64.tar.gz"
-      sha256 "b030644a1ae04b7618974d17efcb3ebbc80e688264ba17f2d71cc55aa1228046"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sst/ion/releases/download/v0.0.96/sst-linux-arm64.tar.gz"
+      sha256 "e0f07a370ea9c9aebb04d3b31f2f1c7eb67601a50e4be11a9d6bfd5ac14e5301"
 
       def install
         bin.install "sst"

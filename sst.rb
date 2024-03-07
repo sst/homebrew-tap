@@ -5,20 +5,20 @@
 class Sst < Formula
   desc ""
   homepage ""
-  version "0.0.120"
+  version "0.0.121"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sst/ion/releases/download/v0.0.120/sst-mac-arm64.tar.gz"
-      sha256 "662719d931d08d91916011d6e84c20500d67a4ba5df8f08081282b656dfcb883"
+    if Hardware::CPU.intel?
+      url "https://github.com/sst/ion/releases/download/v0.0.121/sst-mac-x86_64.tar.gz"
+      sha256 "7d0f05dff308026024be85a9eb174a7650bd3753a4d8a4821dd5358114de48f1"
 
       def install
         bin.install "sst"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sst/ion/releases/download/v0.0.120/sst-mac-x86_64.tar.gz"
-      sha256 "44039700a3924b40cc306161235589068249a24aedb94c6c4311e895090577d1"
+    if Hardware::CPU.arm?
+      url "https://github.com/sst/ion/releases/download/v0.0.121/sst-mac-arm64.tar.gz"
+      sha256 "370ef8bfb0b700fb916905dc46d51993f77b9db02e5b3e20766513a151629660"
 
       def install
         bin.install "sst"
@@ -27,17 +27,17 @@ class Sst < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/sst/ion/releases/download/v0.0.120/sst-linux-x86_64.tar.gz"
-      sha256 "98c0959d691e6c55638a4f80441cb1349b7abed8d1679b38dc1de1e9c4184248"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sst/ion/releases/download/v0.0.121/sst-linux-arm64.tar.gz"
+      sha256 "bc229c745321442d4a077a8944c70e498a3703b15f907ccd321ad0b914e30f33"
 
       def install
         bin.install "sst"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/ion/releases/download/v0.0.120/sst-linux-arm64.tar.gz"
-      sha256 "040060e6ef64145f28ec1844cf2ed656decc3a3bfd23b1b7bc12751c865a05d5"
+    if Hardware::CPU.intel?
+      url "https://github.com/sst/ion/releases/download/v0.0.121/sst-linux-x86_64.tar.gz"
+      sha256 "e93bc17130aa530778a8cae9a9fc1c3ecb728bbf76073135932318e15d09ecc8"
 
       def install
         bin.install "sst"

@@ -5,20 +5,20 @@
 class Sst < Formula
   desc ""
   homepage ""
-  version "0.0.213"
+  version "0.0.214"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sst/ion/releases/download/v0.0.213/sst-mac-x86_64.tar.gz"
-      sha256 "87190bb8e58f0ad3d11218646786d399cd94ebb2ec187980be3e6dbcb123a5df"
+    if Hardware::CPU.arm?
+      url "https://github.com/sst/ion/releases/download/0.0.214/sst-mac-arm64.tar.gz"
+      sha256 "7b014408a1ddae18bf58040565206af27a3985e99e3714a9bd60ea29c5c970d6"
 
       def install
         bin.install "sst"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/sst/ion/releases/download/v0.0.213/sst-mac-arm64.tar.gz"
-      sha256 "604abf3d9e64ccb3b7a137161e472b25923bcc74666e2f27ac1998942cbfe1b9"
+    if Hardware::CPU.intel?
+      url "https://github.com/sst/ion/releases/download/0.0.214/sst-mac-x86_64.tar.gz"
+      sha256 "4519d5ef968cb23884c2399bac378030096248567ee6581a989f3868b7af0fd2"
 
       def install
         bin.install "sst"
@@ -27,17 +27,17 @@ class Sst < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/ion/releases/download/v0.0.213/sst-linux-arm64.tar.gz"
-      sha256 "554dece3df0229db6102ef28666abaa4c7482fb8d6063cca646b03a99849dcdc"
+    if Hardware::CPU.intel?
+      url "https://github.com/sst/ion/releases/download/0.0.214/sst-linux-x86_64.tar.gz"
+      sha256 "7cc3a7ded103ec091f6031e67bdde8666687a4f84c27557ccdbe595f7874bbab"
 
       def install
         bin.install "sst"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sst/ion/releases/download/v0.0.213/sst-linux-x86_64.tar.gz"
-      sha256 "94610bc9967bf35813377e80f2c863457b90e5233acdb9183686e5680e710669"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sst/ion/releases/download/0.0.214/sst-linux-arm64.tar.gz"
+      sha256 "e3258634543aacc9c54d3885b36aec394c9b7f5cf27a51140ab3da908d6f3099"
 
       def install
         bin.install "sst"

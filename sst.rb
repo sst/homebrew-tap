@@ -5,20 +5,20 @@
 class Sst < Formula
   desc ""
   homepage ""
-  version "0.0.368"
+  version "0.0.369"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sst/ion/releases/download/v0.0.368/sst-mac-x86_64.tar.gz"
-      sha256 "e1fc7df37b08eb3860f1310642129a2b6ae72e6f6badbdf7600a65e4f82aa1d5"
+    on_intel do
+      url "https://github.com/sst/ion/releases/download/v0.0.369/sst-mac-x86_64.tar.gz"
+      sha256 "3d050c0c09aff3419e3d37a3f8480ad8d3142282ef5fc3ab2072a8b28d3af3c3"
 
       def install
         bin.install "sst"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/sst/ion/releases/download/v0.0.368/sst-mac-arm64.tar.gz"
-      sha256 "e492cedd95c7ebf74e2e97510a592b72cc72d1bb2e112e996fc86c95e0ec2f9c"
+    on_arm do
+      url "https://github.com/sst/ion/releases/download/v0.0.369/sst-mac-arm64.tar.gz"
+      sha256 "eb9d89b596812a086e6c0f984aa60e18245d9565b1f9051e0f03c6ccff66a0aa"
 
       def install
         bin.install "sst"
@@ -27,20 +27,24 @@ class Sst < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/sst/ion/releases/download/v0.0.368/sst-linux-x86_64.tar.gz"
-      sha256 "8d70b78a18dac8db97550711e6a6524cf17dbd35e37c3d1c0793665f52d86cbe"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/sst/ion/releases/download/v0.0.369/sst-linux-x86_64.tar.gz"
+        sha256 "ef4513d8441a54830122bfb832a615da22a89ace288bb3107b730a698c46bb31"
 
-      def install
-        bin.install "sst"
+        def install
+          bin.install "sst"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/ion/releases/download/v0.0.368/sst-linux-arm64.tar.gz"
-      sha256 "7b2a40e3d0570f3fb53fc785b5ec893a5e2f82526c6951bfc6853f910dbad51b"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/sst/ion/releases/download/v0.0.369/sst-linux-arm64.tar.gz"
+        sha256 "75ff567b5d524ba56fcf7b11b1894a7990dd5378d72ba1656c7e4241f769fc9e"
 
-      def install
-        bin.install "sst"
+        def install
+          bin.install "sst"
+        end
       end
     end
   end

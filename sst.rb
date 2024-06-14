@@ -5,20 +5,20 @@
 class Sst < Formula
   desc ""
   homepage ""
-  version "0.0.422"
+  version "0.0.423"
 
   on_macos do
     on_intel do
-      url "https://github.com/sst/ion/releases/download/v0.0.422/sst-mac-x86_64.tar.gz"
-      sha256 "ca4ddd711e52e39db2a692ae2da9dd1d4d51f67ee2099d9b76f6758de9f63bbd"
+      url "https://github.com/sst/ion/releases/download/v0.0.423/sst-mac-x86_64.tar.gz"
+      sha256 "1fce6de24d3170fd8953f659f9b1989269e406da056e676bfd2ef49612268049"
 
       def install
         bin.install "sst"
       end
     end
     on_arm do
-      url "https://github.com/sst/ion/releases/download/v0.0.422/sst-mac-arm64.tar.gz"
-      sha256 "f69de5021cec075c7c1fcc87537559b8725da85d1051e8ebc3946c721a6b0628"
+      url "https://github.com/sst/ion/releases/download/v0.0.423/sst-mac-arm64.tar.gz"
+      sha256 "9de49b831ef872cedf2a8da97aa95b4ce05931c1ad24e369af863d034194cb5a"
 
       def install
         bin.install "sst"
@@ -29,8 +29,8 @@ class Sst < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sst/ion/releases/download/v0.0.422/sst-linux-x86_64.tar.gz"
-        sha256 "d03fa2ef435bea5cc8e17273e7c6102fd41d9a5c89f766933361cf0a67a4e333"
+        url "https://github.com/sst/ion/releases/download/v0.0.423/sst-linux-x86_64.tar.gz"
+        sha256 "9516ae9ae8fa2dd3a0912e372324d48b32cdf5e009fc9c860fc6602350e79c1a"
 
         def install
           bin.install "sst"
@@ -39,8 +39,8 @@ class Sst < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sst/ion/releases/download/v0.0.422/sst-linux-arm64.tar.gz"
-        sha256 "6e3011f0acf63c7a7e6c210f6dcd7f982d1a66b9d4dac6c619eac658d28b9576"
+        url "https://github.com/sst/ion/releases/download/v0.0.423/sst-linux-arm64.tar.gz"
+        sha256 "67317b04f7eb72acb850c692bc94d391c0e4d4c6289cdb57c2d692bd4b8895fb"
 
         def install
           bin.install "sst"

@@ -5,20 +5,20 @@
 class Sst < Formula
   desc ""
   homepage ""
-  version "3.8.6"
+  version "3.8.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sst/sst/releases/download/v3.8.6/sst-mac-x86_64.tar.gz"
-      sha256 "05f2191aed1f4f044c7fa36be3190577c00140fd410ea44fc32fd985a0990bbe"
+      url "https://github.com/sst/sst/releases/download/v3.8.7/sst-mac-x86_64.tar.gz"
+      sha256 "776b2e51735f0e5f86f4265b3a73c6a18f92bc87904e98c42419682533038d5e"
 
       def install
         bin.install "sst"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sst/sst/releases/download/v3.8.6/sst-mac-arm64.tar.gz"
-      sha256 "31b03d6b9c2c3b0f42b6e91023c22c4927bafb947f159b6b8c5e6e76e1d49e43"
+      url "https://github.com/sst/sst/releases/download/v3.8.7/sst-mac-arm64.tar.gz"
+      sha256 "ccfde9778b75b98a5bd021c5afc52bfee81849d3e69f5d6dd646fe8e0cb995a1"
 
       def install
         bin.install "sst"
@@ -29,8 +29,8 @@ class Sst < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sst/sst/releases/download/v3.8.6/sst-linux-x86_64.tar.gz"
-        sha256 "814bf4d9f57dba3c0dba7d3321a331d4bf4ca970f9062a1dbf7ab3327e90c625"
+        url "https://github.com/sst/sst/releases/download/v3.8.7/sst-linux-x86_64.tar.gz"
+        sha256 "5a2b374d41c28cb12dcb3ee5c06db2bfda0de5cb2a94b0b4939d2ce26c205ccf"
 
         def install
           bin.install "sst"
@@ -39,8 +39,8 @@ class Sst < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sst/sst/releases/download/v3.8.6/sst-linux-arm64.tar.gz"
-        sha256 "dd51d05da5fba93b9f21957a6dd40005f0358f1e6ef47872590e331a869d46f8"
+        url "https://github.com/sst/sst/releases/download/v3.8.7/sst-linux-arm64.tar.gz"
+        sha256 "82f599352f68d0adc1ef68e37636a88d79ad633ad2417bfbc812222a233a8ec7"
 
         def install
           bin.install "sst"

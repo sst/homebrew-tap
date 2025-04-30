@@ -5,20 +5,20 @@
 class Sst < Formula
   desc ""
   homepage ""
-  version "3.14.6"
+  version "3.14.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sst/sst/releases/download/v3.14.6/sst-mac-x86_64.tar.gz"
-      sha256 "79d4945de2e460cdf0f9c8b614f814792443fbc3d3cbcbfba0ea771593e266c5"
+      url "https://github.com/sst/sst/releases/download/v3.14.7/sst-mac-x86_64.tar.gz"
+      sha256 "8c830243e9ed70770b808176c3964f658f641ae59bb28b52b2152c72114c3606"
 
       def install
         bin.install "sst"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sst/sst/releases/download/v3.14.6/sst-mac-arm64.tar.gz"
-      sha256 "c8c8015f4bd920c465150977f76d29a3a05399e18e9e7430a4d237e8272fcbff"
+      url "https://github.com/sst/sst/releases/download/v3.14.7/sst-mac-arm64.tar.gz"
+      sha256 "b41b379f7a0a555d526ea5b6ba93750b98368f7fb296215dbf4d8cdeaa9c2c09"
 
       def install
         bin.install "sst"
@@ -27,24 +27,18 @@ class Sst < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sst/sst/releases/download/v3.14.6/sst-linux-x86_64.tar.gz"
-        sha256 "65676b715df1daca42cf427489e2e313a3ff9148eea7d3c6ef7ab20aa38c96db"
-
-        def install
-          bin.install "sst"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/sst/sst/releases/download/v3.14.7/sst-linux-x86_64.tar.gz"
+      sha256 "67d7fcf6e7ef5bf71b30f9c9a7d612c0fdec06b7ae19e7e6456702e83ddf5b45"
+      def install
+        bin.install "sst"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sst/sst/releases/download/v3.14.6/sst-linux-arm64.tar.gz"
-        sha256 "99abc6ee8ae614e72d93e9b845c19f73f463f2f834cb1ba2776cd94677facc6e"
-
-        def install
-          bin.install "sst"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/sst/sst/releases/download/v3.14.7/sst-linux-arm64.tar.gz"
+      sha256 "3d3dd7c2d9f4383720fd230b195bac54e914e070234bf007ced893b6043f6541"
+      def install
+        bin.install "sst"
       end
     end
   end

@@ -5,20 +5,20 @@
 class Opencode < Formula
   desc ""
   homepage ""
-  version "0.0.45"
+  version "0.0.47"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sst/opencode/releases/download/0.0.45/opencode-mac-x86_64.tar.gz"
-      sha256 "a0396d6a33505f9ee4be609a36b3e77a1c1a6641d9a365e730cb3bcebaf2d9fb"
+      url "https://github.com/sst/opencode/releases/download/v0.0.47/opencode-mac-x86_64.tar.gz"
+      sha256 "e725dcfd250f78f214caa5d40e6a3d650bbf308ce83f791dd5f9d236dd12927a"
 
       def install
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sst/opencode/releases/download/0.0.45/opencode-mac-arm64.tar.gz"
-      sha256 "33093f7f40e081c0f65812e4347f89737bc57154fc4d5c9c89f097d5f8de6b60"
+      url "https://github.com/sst/opencode/releases/download/v0.0.47/opencode-mac-arm64.tar.gz"
+      sha256 "1f27b4c07a587b5f5c9d5c255bcd57e1997f562dccbeb2bdef4449da724e62a7"
 
       def install
         bin.install "opencode"
@@ -28,15 +28,15 @@ class Opencode < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/opencode/releases/download/0.0.45/opencode-linux-x86_64.tar.gz"
-      sha256 "028bb9b33a7b9b7ad5a9d6f228cd88ecb0d0008972288af40714707722a43a3c"
+      url "https://github.com/sst/opencode/releases/download/v0.0.47/opencode-linux-x86_64.tar.gz"
+      sha256 "a11d3209f24e6868d86d19e2fbbb938eb7cfb4ea21bde61385abdd63c90ee94e"
       def install
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/opencode/releases/download/0.0.45/opencode-linux-arm64.tar.gz"
-      sha256 "6c1841058f1d39b1446905c22e7c67e43a6f931e37e7a3668bf2e6e9edda6933"
+      url "https://github.com/sst/opencode/releases/download/v0.0.47/opencode-linux-arm64.tar.gz"
+      sha256 "dcd764222f9256c0eb7da9cb7002eabab4c65f9e7513243607f51cd131fa1d3e"
       def install
         bin.install "opencode"
       end

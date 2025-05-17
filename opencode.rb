@@ -5,20 +5,20 @@
 class Opencode < Formula
   desc ""
   homepage ""
-  version "0.0.50"
+  version "0.0.51"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sst/opencode/releases/download/v0.0.50/opencode-mac-x86_64.tar.gz"
-      sha256 "77b908356da6145d815c37c81a39e2e963e7ccae15aae54b293ea0efd794c567"
+      url "https://github.com/sst/opencode/releases/download/v0.0.51/opencode-mac-x86_64.tar.gz"
+      sha256 "0a82b28669a828dea943b383ca3fea4e9ef094acf74d9c0ea2da9efaff4ddbf3"
 
       def install
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sst/opencode/releases/download/v0.0.50/opencode-mac-arm64.tar.gz"
-      sha256 "2cbdcecf7f006bd98bce161391531790f3c5edd923c303871b4a4f6c981b1f20"
+      url "https://github.com/sst/opencode/releases/download/v0.0.51/opencode-mac-arm64.tar.gz"
+      sha256 "45a021e7ad4acdc1a6f82809e36f59c0d8d3982d0cd0a75060deaa68e618859e"
 
       def install
         bin.install "opencode"
@@ -28,15 +28,15 @@ class Opencode < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/opencode/releases/download/v0.0.50/opencode-linux-x86_64.tar.gz"
-      sha256 "3236b79a77bf11db242074454e6afdc02223a5f8e5735fffc56d6e8745fbc83e"
+      url "https://github.com/sst/opencode/releases/download/v0.0.51/opencode-linux-x86_64.tar.gz"
+      sha256 "7c034923e7aa6c01f4252e1c7c711d9dff2f1f84c3e500c394a172c94d32d0e4"
       def install
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/opencode/releases/download/v0.0.50/opencode-linux-arm64.tar.gz"
-      sha256 "29782ab2af54608174198f8adfb84ef6006573d4cd428f321c386fc784d8656e"
+      url "https://github.com/sst/opencode/releases/download/v0.0.51/opencode-linux-arm64.tar.gz"
+      sha256 "069fc94ea1b1fa8fa791455fb7e0f10daff4ff21a2d50d9b2ec6c8a0c03f8cc3"
       def install
         bin.install "opencode"
       end

@@ -5,20 +5,20 @@
 class Opencode < Formula
   desc "The AI coding agent built for the terminal."
   homepage "https://github.com/sst/opencode"
-  version "0.1.119"
+  version "0.1.120"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sst/opencode/releases/download/v0.1.119/opencode-darwin-x64.zip"
-      sha256 "eed86b0ee37f4d9678a2f504f5a2e8f3332e38a5cda239db3ad1a2d339ffc6b4"
+      url "https://github.com/sst/opencode/releases/download/v0.1.120/opencode-darwin-x64.zip"
+      sha256 "5100512a2a1e2bcc1f3a5adfe9ea1360590876c2f30491e5c3d2676f92f7b979"
 
       def install
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sst/opencode/releases/download/v0.1.119/opencode-darwin-arm64.zip"
-      sha256 "ebab8584119134759ced38fadca74bf7e4cf5dc271f652af625cb4c47ebfea6b"
+      url "https://github.com/sst/opencode/releases/download/v0.1.120/opencode-darwin-arm64.zip"
+      sha256 "191e9a552119ba1417b719db79f16d74b18b226bd7f6cee66320d004a9855a5f"
 
       def install
         bin.install "opencode"
@@ -28,15 +28,15 @@ class Opencode < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/opencode/releases/download/v0.1.119/opencode-linux-x64.zip"
-      sha256 "07cc793a1b4db140fae8ec3f003e9c38e5347ff09fde7149fee2f022c92354d0"
+      url "https://github.com/sst/opencode/releases/download/v0.1.120/opencode-linux-x64.zip"
+      sha256 "c663983b01ad5a8470337c164cc20395f2baeeb5d5003242925ff7b3b9f88d68"
       def install
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/opencode/releases/download/v0.1.119/opencode-linux-arm64.zip"
-      sha256 "dac2d43a2a8205d3f76412a7d6069479fc2ede820a8c06309a677f03258ae519"
+      url "https://github.com/sst/opencode/releases/download/v0.1.120/opencode-linux-arm64.zip"
+      sha256 "ab4d99e3f0c4c11e7edb81e01e9d4286de3700803d79288dbdf175c7a63d18d7"
       def install
         bin.install "opencode"
       end

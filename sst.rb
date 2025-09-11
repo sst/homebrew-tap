@@ -5,20 +5,20 @@
 class Sst < Formula
   desc ""
   homepage ""
-  version "3.17.12"
+  version "3.17.13"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sst/sst/releases/download/v3.17.12/sst-mac-x86_64.tar.gz"
-      sha256 "78b824d8eb8be6e8352ccd2c8b5aaaf6b3637c3f6b70efd57dece4b099d46cf6"
+      url "https://github.com/sst/sst/releases/download/v3.17.13/sst-mac-x86_64.tar.gz"
+      sha256 "3c447c290bf08627b4a2d5bea9e66964007929fbdd92592c24f1a468d83ba13d"
 
       def install
         bin.install "sst"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sst/sst/releases/download/v3.17.12/sst-mac-arm64.tar.gz"
-      sha256 "8fa3ae9e90115a78f5f793bdcf23c74b2f7d48d62df47fd6be39b1cf43373b6a"
+      url "https://github.com/sst/sst/releases/download/v3.17.13/sst-mac-arm64.tar.gz"
+      sha256 "4f8afde2e984d7594917decce9943b11ce3c87b5134a690102263c9e707ab8ea"
 
       def install
         bin.install "sst"
@@ -27,16 +27,16 @@ class Sst < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/sst/releases/download/v3.17.12/sst-linux-x86_64.tar.gz"
-      sha256 "e880c769af6a66679d53c0acd9b5a42d167584d7f18e6521f03a5fd05d4c91c5"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sst/sst/releases/download/v3.17.13/sst-linux-x86_64.tar.gz"
+      sha256 "64e91f969bd2f9d4ad7f86012705b4330a3e9a6f7f5db6363ed201cb7ccdc1f9"
       def install
         bin.install "sst"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sst/sst/releases/download/v3.17.12/sst-linux-arm64.tar.gz"
-      sha256 "39b9ef4b09bd5aba608d47071d117f9439fc463d2c76966ef366da0c7b7f5178"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sst/sst/releases/download/v3.17.13/sst-linux-arm64.tar.gz"
+      sha256 "c7cee4c7a2d31613c3a90ca4079c0b9c7b80f6f05110261642749b7d2b8b3a48"
       def install
         bin.install "sst"
       end
